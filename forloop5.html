@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forloop 5 (While)</title>
+</head>
+<body>
+    <div id="out"></div>
+    <script>
+  let outDiv = document.getElementById("out");
+  let rows = 10;
+  let output = "";
+  let row = 1;
+
+  while (row <= rows) {
+  let col = 1;
+
+  while (col <= rows) {
+    let x = col >= row ? "*" : " ";
+    console.log(x);
+    output += x;
+    col++;
+  }
+ 
+  col = 1;
+
+  while (col <= rows) {
+    let x = col <= rows - row ? " " : "*";
+    console.log(x);
+    output += x;
+    col++;
+  }
+
+  output += "<br/>";
+  row++;
+}
+
+outDiv.innerHTML = output;
+  
+    </script>
+</body>
+</html>

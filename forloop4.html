@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop4</title>
+</head>
+<body>
+    <div id="out"></div>
+    <script>
+         let outDiv = document.getElementById("out");
+         let rows = 10;
+         let output = "";
+
+    for (let row = 1; row <= rows; row++) {
+      console.log("Row: " + row);
+    for (let col = 1; col <= rows; col++) {
+      let x = col >= row ? "*" : " ";
+      console.log(x);
+      output += x;
+    }
+ 
+    for (let col = 1; col <= rows; col++) {
+      let x = col <= rows - row ? " " : "*";
+      console.log(x);
+      output += x;
+    }
+    output += "<br/>";
+    
+}
+    outDiv.innerHTML = output;
+    </script>
+    
+
+</body>
+</html>
